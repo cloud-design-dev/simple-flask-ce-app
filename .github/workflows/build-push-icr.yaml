@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 env:
   GITHUB_SHA: ${{ github.sha }}
-  REGISTRY_URL: us.icr.io
+  REGISTRY_URL: ${{ vars.REGISTRY_ENDPOINT }}
   ICR_NAMESPACE: ${{ vars.REGISTRY_NAMESPACE }}
   ICR_IMAGE: ${{ vars.REGISTRY_IMAGE }}
 jobs:
